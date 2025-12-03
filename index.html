@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Growth Proposal - Shree Thali</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #D35400; /* Saffron/Burnt Orange for Appetite */
+            --secondary-color: #2C3E50; /* Dark Slate for Text */
+            --accent-color: #FDEBD0; /* Light Cream for Backgrounds */
+            --white: #ffffff;
+            --gray: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        /* Sections */
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Superstar Box */
+        .highlight-box {
+            background-color: var(--accent-color);
+            border: 1px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+        }
+
+        table thead tr {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .total-row {
+            font-weight: 700;
+            background-color: var(--secondary-color) !important;
+            color: var(--white);
+        }
+
+        .investment-highlight {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul li:before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .contact-info {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-top: 10px;
+        }
+
+        /* Print Button */
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button:hover {
+            background-color: #a04000;
+        }
+
+        @media print {
+            body { background-color: #fff; padding: 0; }
+            .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; padding: 0 20px; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- The user requested removal of the print button:
+    <div class="no-print">
+        <button onclick="window.print()">🖨️ Open Print Dialog (Select 'Save as PDF')</button>
+    </div> 
+    -->
+
+    <div class="container">
+        <header>
+            <h1>Digital Growth Proposal</h1>
+            <div class="subtitle">Prepared Exclusively for <strong>Shree Thali</strong></div>
+            <div class="subtitle">Duration: 6 Months</div>
+        </header>
+
+        <section>
+            <h2>I. Executive Summary</h2>
+            <p>This proposal outlines a strategic partnership designed to build <strong>Shree Thali's</strong> online presence from the ground up. As the brand currently relies solely on a Google Maps profile, our immediate priority is to launch authoritative social media channels and drive visibility.</p>
+            <p>Our strategy centers on <strong>Authentic Storytelling</strong>, leveraging genuine customer experiences for <strong>both the In-Dining Thali and the Tiffin Box Service</strong> to build community trust, while aggressively managing Local SEO to drive direct foot traffic and subscription growth.</p>
+        </section>
+        
+        <section>
+            <h2>II. About Digital Door Agency</h2>
+            <p><strong>Digital Door Agency helps local businesses grow online through modern websites, powerful digital marketing, and engaging creative content—built with strategy, clarity, and measurable results.</strong></p>
+            
+            <p>Digital Door Agency was born with a simple mission—to make digital growth accessible and straightforward for every local business, whether small or scaling. We saw that many small and local restaurants struggled to compete online, and we decided to become their long-term digital partner, focusing on transforming their online presence into real-world foot traffic.</p>
+            
+            <h3>Core Digital Solutions — All Under One Roof</h3>
+            <p>We combine design, technology, and marketing expertise to deliver complete digital solutions:</p>
+            <ul style="columns: 2;">
+                <li>Web Development & Design</li>
+                <li>Graphics Design & Branding 🎨</li>
+                <li>Social Media Management 📱</li>
+                <li>Ads & Precision SEO 🚀</li>
+                <li>Video Production & Editing 🎥</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>Why Partner with Digital Door Agency?</h3>
+                <p>Our work philosophy is built on transparency, communication, and creative storytelling. We treat every project as a partnership, ensuring your success is our absolute priority.</p>
+                <ul>
+                    <li><strong>Authentic, Story-Driven Content:</strong> We focus on making your customers the face of the brand to build real trust.</li>
+                    <li><strong>Affordable & Clear Pricing:</strong> Transparent costs designed to be accessible for small businesses and startups.</li>
+                    <li><strong>Proven Track Record:</strong> Worked with <strong>50+ business owners</strong> and delivered over 200 creative assets, specializing in local hospitality growth.</li>
+                    <li><strong>Focus on Measurable Results:</strong> Our strategies are aimed at increasing footfall, leads, and conversions.</li>
+                </ul>
+            </div>
+
+            <p class="investment-highlight" style="text-align: center; margin-top: 30px;">
+                Your business, our digital expertise — together, we grow.
+            </p>
+
+        </section>
+
+        <section>
+            <h2>III. Digital Vision & Philosophy</h2>
+            
+            <div class="highlight-box">
+                <h3>The Philosophy: Authentic Dual-Channel Advocacy</h3>
+                <p>We focus on <strong>Customer Advocacy</strong> across your primary revenue streams: In-Dining and Tiffin Service. Our content strategy shifts the focus from static food presentation to showcasing genuine diner experiences and the convenience of the Tiffin Box. We build brand loyalty and trust by highlighting these authentic voices in both contexts.</p>
+            </div>
+
+            <h3>Strategic Objectives:</h3>
+            <ul>
+                <li><strong>Expand Market Reach:</strong> Actively target and acquire new customers across digital channels.</li>
+                <li><strong>Build the Foundation:</strong> Launch professional Instagram and Facebook pages immediately.</li>
+                <li><strong>Amplify Voices:</strong> Utilize high-impact video testimonials and dynamic customer interviews to establish credibility and trust for both services.</li>
+                <li><strong>Drive Footfall & Subscriptions:</strong> Leverage your existing Google Maps asset and targeted content to dominate local search results for both dining and delivery/tiffin.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>IV. Core Service Modules</h2>
+
+            <h3>Module A: Content Creation & Social Media</h3>
+            <p><strong>Goal:</strong> Build the social media ecosystem from zero and generate trust by showcasing real customer enthusiasm for both the dining hall and the tiffin service.</p>
+            
+            <p><strong>1. Foundational Setup (Month 1 Priority):</strong></p>
+            <ul>
+                <li>Professional setup of Instagram and Facebook Business pages.</li>
+                <li><strong>Brand Identity:</strong> Adaptation of your existing logo for social profiles, Highlights covers design, and bio optimization.</li>
+            </ul>
+
+            <p><strong>2. Content Strategy ("The Visual Hook"):</strong></p>
+            <ul>
+                <li><strong>The Thali Diaries:</strong> Authentic, high-impact video testimonials featuring diners (students and families).</li>
+                <li><strong>Tiffin Time Reels:</strong> Highlighting the convenience, freshness, and variety of the Tiffin Box Service.</li>
+                <li><strong>Food Focus:</strong> Dynamic reels showcasing the "Grand Thali Reveal" and Chef Specials.</li>
+                <li><strong>Static Graphics:</strong> Menu features, offers, and "Customer of the Week" spotlights.</li>
+            </ul>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Deliverable</th>
+                        <th>Monthly Quantity</th>
+                        <th>Total (6 Months)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Video Reels/Shorts</strong></td>
+                        <td>12</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Graphical Posts</strong></td>
+                        <td>8</td>
+                        <td>48</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>3. Management:</strong> Daily monitoring, strategic scheduling, and community engagement (responding to all comments).</p>
+
+            <h3>Module B: Local SEO & Visibility</h3>
+            <p><strong>Goal:</strong> Leverage the existing Google Maps Profile to rank #1 for high-intent searches.</p>
+            <ul>
+                <li><strong>GBP Optimization:</strong> Audit, category enhancement, and regular content sync.</li>
+                <li><strong>Review Management:</strong> System implementation to generate 5-star reviews from happy customers.</li>
+                <li><strong>Local Keyword Targeting:</strong> Focused targeting of high-intent, local search terms for tiffin and mess services:
+                    <ul>
+                        <li>"best tiffin service in nagpur"</li>
+                        <li>"best mess in nagpur"</li>
+                        <li>"affordable tiffin"</li>
+                    </ul>
+                </li>
+                <li><strong>Paid Ads Strategy Note:</strong> The ads spend amount is kept separate from this retainer fee. We recommend allocating approximately 35% of the total paid ads spend amount towards high-impact digital marketing campaigns (e.g., location-based ads) focused on driving foot traffic and tiffin subscriptions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>V. Investment Summary</h2>
+            <p>This is a fixed, all-inclusive investment for the entire contract period.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 60%;">Service Item</th>
+                        <th style="text-align: right;">Total Investment (6 Months)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>High-Impact Reels</strong><br>
+                            <small>Production & editing of 72 professional video reels (Customer Review Focus).</small>
+                        </td>
+                        <td style="text-align: right;">₹ 108,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Graphical Posts</strong><br>
+                            <small>Design & deployment of 48 high-quality graphical posts.</small>
+                        </td>
+                        <td style="text-align: right;">₹ 14,400</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Social Media Management</strong><br>
+                            <small>Includes Brand Launch: Page setup, bio optimization, daily scheduling.</small>
+                        </td>
+                        <td style="text-align: right;">₹ 60,000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Local SEO Management</strong><br>
+                            <small>Dedicated strategy & implementation (₹ 25,000 per 3 months).</small>
+                        </td>
+                        <td style="text-align: right;">₹ 50,000</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>TOTAL PROJECT INVESTMENT</td>
+                        <td style="text-align: right;">₹ 232,400</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>VI. Payment Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Installment</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Installment 1 (Advance)</strong></td>
+                        <td>₹ 116,200 <small>(50%)</small></td>
+                        <td>Upon contract signing & commencement.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Installment 2 (Mid-Contract)</strong></td>
+                        <td>₹ 116,200 <small>(50%)</small></td>
+                        <td>Due at the start of Month 4.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="footer">
+            <p>We look forward to partnering with Shree Thali to bring your incredible culinary tradition to a wider audience.</p>
+            <div class="contact-info">
+                Digital Door Agency | +91 8806479869, +91 8380818894 | support@digitaldoorgency.co.in
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
