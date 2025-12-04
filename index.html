@@ -21,14 +21,14 @@
             color: var(--secondary-color);
             background-color: #f4f7f6;
             margin: 0;
-            padding: 20px;
+            padding: 20px; /* Base padding for large screens */
         }
 
         .container {
             max-width: 850px;
             margin: 0 auto;
             background: var(--white);
-            padding: 50px;
+            padding: 50px; /* Base padding for large screens */
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
@@ -91,10 +91,15 @@
         }
 
         /* Tables */
+        .table-wrapper {
+            overflow-x: auto; /* Enables horizontal scrolling on small screens */
+            margin: 25px 0;
+        }
+
         table {
             width: 100%;
+            min-width: 500px; /* Ensures tables look good even on mobile before scrolling */
             border-collapse: collapse;
-            margin: 25px 0;
             font-size: 0.95em;
         }
 
@@ -148,6 +153,12 @@
             position: absolute;
             left: 0;
         }
+        
+        /* Responsive Columns for Core Digital Solutions */
+        .responsive-columns {
+            columns: 2;
+        }
+
 
         /* Footer */
         .footer {
@@ -165,11 +176,7 @@
             margin-top: 10px;
         }
 
-        /* Print Button */
-        .no-print {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+        /* Print Button (removed in logic, kept comment here) */
         
         button {
             background-color: var(--primary-color);
@@ -186,6 +193,31 @@
             background-color: #a04000;
         }
 
+        /* --- MOBILE OPTIMIZATION --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 2em; 
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+
+            /* Collapse two-column list to one column on mobile */
+            .responsive-columns {
+                columns: 1;
+            }
+        }
+
+        /* Print Media Query */
         @media print {
             body { background-color: #fff; padding: 0; }
             .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; padding: 0 20px; }
@@ -194,12 +226,6 @@
     </style>
 </head>
 <body>
-    <!-- The user requested removal of the print button:
-    <div class="no-print">
-        <button onclick="window.print()">🖨️ Open Print Dialog (Select 'Save as PDF')</button>
-    </div> 
-    -->
-
     <div class="container">
         <header>
             <h1>Digital Growth Proposal</h1>
@@ -210,21 +236,21 @@
         <section>
             <h2>I. Executive Summary</h2>
             <p>This proposal outlines a strategic partnership designed to build <strong>Shree Thali's</strong> online presence from the ground up. As the brand currently relies solely on a Google Maps profile, our immediate priority is to launch authoritative social media channels and drive visibility.</p>
-            <p>Our strategy centers on <strong>Authentic Storytelling</strong>, leveraging genuine customer experiences for <strong>both the In Dining Thali and the Tiffin Box Service</strong> to build community trust, while aggressively managing Local SEO to drive direct foot traffic and subscription growth.</p>
+            <p>Our strategy centers on <strong>Authentic Storytelling</strong>, leveraging genuine customer experiences for <strong>both the In-Dining Thali and the Tiffin Box Service</strong> to build community trust, while aggressively managing Local SEO to drive direct foot traffic and subscription growth.</p>
         </section>
         
         <section>
             <h2>II. About Digital Door Agency</h2>
-            <p><strong>Digital Door Agency helps local businesses grow online through modern websites, powerful digital marketing, and engaging creative content built with strategy, clarity, and measurable results.</strong></p>
+            <p><strong>Digital Door Agency helps local businesses grow online through modern websites, powerful digital marketing, and engaging creative content—built with strategy, clarity, and measurable results.</strong></p>
             
-            <p>Digital Door Agency was born with a simple mission to make digital growth accessible and straightforward for every local business, whether small or scaling. We saw that many small and local restaurants struggled to compete online, and we decided to become their long term digital partner, focusing on transforming their online presence into real-world foot traffic.</p>
+            <p>Digital Door Agency was born with a simple mission to make digital growth accessible and straightforward for every local business, whether small or scaling. We saw that many small and local restaurants struggled to compete online, and we decided to become their long-term digital partner, focusing on transforming their online presence into real world foot traffic.</p>
             
             <h3>Core Digital Solutions — All Under One Roof</h3>
             <p>We combine design, technology, and marketing expertise to deliver complete digital solutions:</p>
-            <ul style="columns: 2;">
+            <ul class="responsive-columns">
                 <li>Web Development & Design</li>
                 <li>Graphics Design & Branding </li>
-                <li>Social Media Management </li>
+                <li>Social Media Management</li>
                 <li>Ads & Precision SEO </li>
                 <li>Video Production & Editing </li>
             </ul>
@@ -233,14 +259,15 @@
                 <h3>Why Partner with Digital Door Agency?</h3>
                 <p>Our work philosophy is built on transparency, communication, and creative storytelling. We treat every project as a partnership, ensuring your success is our absolute priority.</p>
                 <ul>
-                    <li><strong>Authentic, Story Driven Content:</strong> We focus on making your customers the face of the brand to build real trust.</li>
+                    <li><strong>Authentic, Story-Driven Content:</strong> We focus on making your customers the face of the brand to build real trust.</li>
                     <li><strong>Affordable & Clear Pricing:</strong> Transparent costs designed to be accessible for small businesses and startups.</li>
+                    <li><strong>Proven Track Record:</strong> Worked with <strong>50+ business owners</strong> and delivered over 200 creative assets, specializing in local hospitality growth.</li>
                     <li><strong>Focus on Measurable Results:</strong> Our strategies are aimed at increasing footfall, leads, and conversions.</li>
                 </ul>
             </div>
 
             <p class="investment-highlight" style="text-align: center; margin-top: 30px;">
-                Your business, our digital expertise together, we grow.
+                Your business, our digital expertise — together, we grow.
             </p>
 
         </section>
@@ -249,22 +276,47 @@
             <h2>III. Digital Vision & Philosophy</h2>
             
             <div class="highlight-box">
-                <h3>The Philosophy: Authentic Dual Channel Advocacy</h3>
-                <p>We focus on <strong>Customer Advocacy</strong> across your primary revenue streams: In Dining and Tiffin Service. Our content strategy shifts the focus from static food presentation to showcasing genuine diner experiences and the convenience of the Tiffin Box. We build brand loyalty and trust by highlighting these authentic voices in both contexts.</p>
+                <h3>The Philosophy: Authentic Dual-Channel Advocacy</h3>
+                <p>We focus on <strong>Customer Advocacy</strong> across your primary revenue streams: In-Dining and Tiffin Service. Our content strategy shifts the focus from static food presentation to showcasing genuine diner experiences and the convenience of the Tiffin Box. We build brand loyalty and trust by highlighting these authentic voices in both contexts.</p>
             </div>
 
             <h3>Strategic Objectives:</h3>
             <ul>
                 <li><strong>Expand Market Reach:</strong> Actively target and acquire new customers across digital channels.</li>
                 <li><strong>Build the Foundation:</strong> Launch professional Instagram and Facebook pages immediately.</li>
-                <li><strong>Amplify Voices:</strong> Utilize high impact video testimonials and dynamic customer interviews to establish credibility and trust for both services.</li>
+                <li><strong>Amplify Voices:</strong> Utilize high-impact video testimonials and dynamic customer interviews to establish credibility and trust for both services.</li>
                 <li><strong>Drive Footfall & Subscriptions:</strong> Leverage your existing Google Maps asset and targeted content to dominate local search results for both dining and delivery/tiffin.</li>
             </ul>
         </section>
+        
+        <!-- Updated Introduction to Partnership Overview -->
+        <section>
+            <h2>IV. Partnership Overview</h2>
+            <p class="investment-highlight" style="text-align: center; font-size: 1.2em;">
+                Your Exclusive Digital Growth Partnership 🚀
+            </p>
+            <p>We don’t offer generic packages. Instead, we design a custom digital ecosystem exclusively for Shree Thali, aligning with your brand’s dining experience, customer expectations, and expansion goals.</p>
+            <p>Our focus is to position Shree Thali as a premium thali destination, build digital trust, and create consistent customer flow through strategic branding, performance marketing, and technology-driven engagement.</p>
+
+
+            <p>Our premium partnership covers every high-impact digital and branding requirement essential for making <strong>Shree Thali the No.1 Thali and Tiffin Destination in Nagpur</strong>. This is a fully managed 360° growth journey.</p>
+
+            <div class="highlight-box">
+                <h3>What’s Included in the Partnership</h3>
+                <ul>
+                    <li><strong>Professional Branding & Design</strong> (Logo upgrade, Menu design, Print creatives)</li>
+                    <li><strong>Cinematic Video & Food Photography</strong> (Monthly shoots + Reels + Testimonials)</li>
+                    <li><strong>High-Impact Social Media Management</strong> (Premium posts + strategy + stories)</li>
+                    <li><strong>Performance Marketing & Ad Campaigns</strong> (Lead generation + Awareness ads)</li>
+                    <li><strong>Local SEO & Google Business Optimization</strong> (Reviews, ranking, maps growth)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Updated Section -->
 
         <section>
-            <h2>IV. Core Service Modules</h2>
-
+            <h2>V. Core Service Modules</h2>
+            
             <h3>Module A: Content Creation & Social Media</h3>
             <p><strong>Goal:</strong> Build the social media ecosystem from zero and generate trust by showcasing real customer enthusiasm for both the dining hall and the tiffin service.</p>
             
@@ -276,123 +328,160 @@
 
             <p><strong>2. Content Strategy ("The Visual Hook"):</strong></p>
             <ul>
-                <li><strong>The Thali Diaries:</strong> Authentic, high impact video testimonials featuring diners (students and families).</li>
+                <li><strong>The Thali Diaries:</strong> Authentic, high-impact video testimonials featuring diners (students and families).</li>
                 <li><strong>Tiffin Time Reels:</strong> Highlighting the convenience, freshness, and variety of the Tiffin Box Service.</li>
                 <li><strong>Food Focus:</strong> Dynamic reels showcasing the "Grand Thali Reveal" and Chef Specials.</li>
                 <li><strong>Static Graphics:</strong> Menu features, offers, and "Customer of the Week" spotlights.</li>
             </ul>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Deliverable</th>
-                        <th>Monthly Quantity</th>
-                        <th>Total (6 Months)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Video Reels/Shorts</strong></td>
-                        <td>12</td>
-                        <td>72</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Graphical Posts</strong></td>
-                        <td>8</td>
-                        <td>48</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>Monthly Quantity</th>
+                            <th>Total (6 Months)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Video Reels/Shorts</strong></td>
+                            <td>12</td>
+                            <td>72</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Graphical Posts</strong></td>
+                            <td>8</td>
+                            <td>48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <p><strong>3. Management:</strong> Daily monitoring, strategic scheduling, and community engagement (responding to all comments).</p>
 
             <h3>Module B: Local SEO & Visibility</h3>
-            <p><strong>Goal:</strong> Leverage the existing Google Maps Profile to rank #1 for high intent searches.</p>
+            <p><strong>Goal:</strong> Leverage the existing Google Maps Profile to rank #1 for high-intent searches.</p>
             <ul>
                 <li><strong>GBP Optimization:</strong> Audit, category enhancement, and regular content sync.</li>
-                <li><strong>Review Management:</strong> System implementation to generate 5 star reviews from happy customers.</li>
-                <li><strong>Local Keyword Targeting:</strong> Focused targeting of high intent, local search terms for tiffin and mess services:
+                <li><strong>Review Management:</strong> System implementation to generate 5-star reviews from happy customers.</li>
+                <li><strong>Local Keyword Targeting:</strong> Focused targeting of high-intent, local search terms for tiffin and mess services:
                     <ul>
                         <li>"best tiffin service in nagpur"</li>
                         <li>"best mess in nagpur"</li>
                         <li>"affordable tiffin"</li>
                     </ul>
                 </li>
-                <li><strong>Paid Ads Strategy Note:</strong> The ads spend amount is kept separate from this retainer fee. We recommend allocating approximately 35% of the total paid ads spend amount towards high impact digital marketing campaigns (e.g., location based ads) focused on driving foot traffic and tiffin subscriptions.</li>
+                <li>
+                    <strong>Paid Ads Management Fee:</strong> For all digital marketing campaigns, the client is responsible for paying the total media (ads) spend amount directly. Our service charge for managing and optimizing these campaigns will be <strong>30% of the total ads spend amount</strong>. We recommend allocating a budget towards high-impact digital marketing campaigns focused on driving foot traffic and tiffin subscriptions.
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>V. Investment Summary</h2>
-            <p>This is a fixed, all inclusive investment for the entire contract period.</p>
+            <h2>VI. Investment Summary</h2>
+            <p>The total investment is divided into two parts: a <strong>fixed retainer fee</strong> for content and SEO services (detailed below) and a separate <strong>variable management fee (30% of media spend)</strong> for running paid advertising campaigns (if applicable).</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 60%;">Service Item</th>
-                        <th style="text-align: right;">Total Investment (6 Months)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong>High Impact Reels</strong><br>
-                            <small>Production & editing of 72 professional video reels (Customer Review Focus).</small>
-                        </td>
-                        <td style="text-align: right;">₹ 108,000</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>Graphical Posts</strong><br>
-                            <small>Design & deployment of 48 high quality graphical posts.</small>
-                        </td>
-                        <td style="text-align: right;">₹ 14,400</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>Social Media Management</strong><br>
-                            <small>Includes Brand Launch: Page setup, bio optimization, daily scheduling.</small>
-                        </td>
-                        <td style="text-align: right;">₹ 60,000</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>Local SEO Management</strong><br>
-                            <small>Dedicated strategy & implementation (₹ 25,000 per 3 months).</small>
-                        </td>
-                        <td style="text-align: right;">₹ 50,000</td>
-                    </tr>
-                    <tr class="total-row">
-                        <td>TOTAL PROJECT INVESTMENT</td>
-                        <td style="text-align: right;">₹ 232,400</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Service Item</th>
+                            <th style="text-align: right;">Total Investment (6 Months)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>High Impact Reels</strong><br>
+                                <small>Production & editing of 72 professional video reels (Customer Review Focus).</small>
+                            </td>
+                            <td style="text-align: right;">₹ 108,000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Graphical Posts</strong><br>
+                                <small>Design & deployment of 48 high-quality graphical posts.</small>
+                            </td>
+                            <td style="text-align: right;">₹ 14,400</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Social Media Management</strong><br>
+                                <small>Includes Brand Launch: Page setup, bio optimization, daily scheduling.</small>
+                            </td>
+                            <td style="text-align: right;">₹ 60,000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Local SEO Management</strong><br>
+                                <small>Dedicated strategy & implementation (₹ 25,000 per 3 months).</small>
+                            </td>
+                            <td style="text-align: right;">₹ 50,000</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>TOTAL FIXED RETAINER INVESTMENT</td>
+                            <td style="text-align: right;">₹ 232,400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section>
-            <h2>VI. Payment Schedule</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Installment</th>
-                        <th>Amount</th>
-                        <th>Due Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Installment 1 (Advance)</strong></td>
-                        <td>₹ 116,200 <small>(50%)</small></td>
-                        <td>Upon contract signing & commencement.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Installment 2 (Mid Contract)</strong></td>
-                        <td>₹ 116,200 <small>(50%)</small></td>
-                        <td>Due at the start of Month 4.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>VII. Payment Schedule</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Installment</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Installment 1 (Advance)</strong></td>
+                            <td>₹ 116,200 <small>(50% of Fixed Retainer)</small></td>
+                            <td>Upon contract signing & commencement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Installment 2 (Mid-Contract)</strong></td>
+                            <td>₹ 116,200 <small>(50% of Fixed Retainer)</small></td>
+                            <td>Due at the start of Month 4.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Variable Ads Fee</strong></td>
+                            <td>30% of Ads Spend</td>
+                            <td>Monthly (Billed at end of month)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><small>The fixed retainer covers all content creation, social media management, and SEO services. The variable Ads Fee applies only if the client elects to run paid advertising campaigns, and is billed separately based on the total media spend.</small></p>
+        </section>
+
+        <!-- VIII. Terms & Conditions -->
+        <section>
+            <h2>VIII. Terms & Conditions</h2>
+            
+            <div class="highlight-box">
+                <h3>Engagement Policies</h3>
+                <ul>
+                    <li><strong>Minimum Commitment:</strong> 6-month partnership to ensure measurable growth.</li>
+                    <li><strong>Work Cycle:</strong> All work will follow a strategic monthly execution calendar.</li>
+                    <li><strong>Content Usage Rights:</strong> Digital Door Agency holds rights to use media for portfolio & promotions.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Execution Dependencies</h3>
+                <ul>
+                    <li><strong>Timely approvals & inputs</strong> from Shree Thali are necessary to avoid delays.</li>
+                    <li><strong>External expense add-ons</strong> (print, influencer hiring, ad spend) are billed separately if required.</li>
+                    <li><strong>Ad Spend Budget</strong> is not included in the partnership fee.</li>
+                </ul>
+            </div>
         </section>
 
         <div class="footer">
